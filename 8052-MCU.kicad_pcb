@@ -1026,7 +1026,7 @@
 
   (footprint "MountingHole:MountingHole_3.2mm_M3" (layer "F.Cu")
     (tstamp 94776dac-e6c6-4dd9-83a3-dd623a2a4245)
-    (at 144.5 49.5)
+    (at 144.5 45.5)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (property "Sheetfile" "8052.kicad_sch")
@@ -1821,7 +1821,7 @@
 
   (footprint "MountingHole:MountingHole_3.2mm_M3" (layer "F.Cu")
     (tstamp f98fa054-fead-4c05-94bb-be522afd3440)
-    (at 56.5 49.5)
+    (at 56.5 45.5)
     (descr "Mounting Hole 3.2mm, no annular, M3")
     (tags "mounting hole 3.2mm no annular m3")
     (property "Sheetfile" "8052.kicad_sch")
@@ -2569,13 +2569,13 @@
     )
   )
 
-  (gr_line (start 148 46) (end 148 112)
+  (gr_line (start 148 42) (end 148 112)
     (stroke (width 0.1) (type solid)) (layer "Edge.Cuts") (tstamp 483c7c94-cd50-4542-897a-0f25b3d80a5a))
-  (gr_line (start 53 112) (end 53 46)
+  (gr_line (start 53 112) (end 53 42)
     (stroke (width 0.1) (type solid)) (layer "Edge.Cuts") (tstamp acf01f17-d942-4a2a-a23b-2c5f76cfe5ba))
   (gr_line (start 148 112) (end 53 112)
     (stroke (width 0.1) (type solid)) (layer "Edge.Cuts") (tstamp ae178410-431d-47b8-b645-b97f622f64b9))
-  (gr_line (start 53 46) (end 148 46)
+  (gr_line (start 53 42) (end 148 42)
     (stroke (width 0.1) (type solid)) (layer "Edge.Cuts") (tstamp c8254dab-d795-4141-b2bb-75a80680ea5e))
 
   (segment (start 64.195 103.815) (end 64.195 107.8) (width 0.2) (layer "F.Cu") (net 1) (tstamp 1ffd6ff5-1ca5-438d-bfa6-bdc5c2b46b45))
