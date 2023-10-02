@@ -3,7 +3,7 @@
     "3dviewports": [],
     "design_settings": {
       "defaults": {
-        "board_outline_line_width": 0.09999999999999999,
+        "board_outline_line_width": 0.049999999999999996,
         "copper_line_width": 0.19999999999999998,
         "copper_text_italic": false,
         "copper_text_size_h": 1.5,
@@ -27,7 +27,7 @@
         "fab_text_size_v": 1.0,
         "fab_text_thickness": 0.15,
         "fab_text_upright": false,
-        "other_line_width": 0.15,
+        "other_line_width": 0.09999999999999999,
         "other_text_italic": false,
         "other_text_size_h": 1.0,
         "other_text_size_v": 1.0,
@@ -38,12 +38,12 @@
           "height": 1.524,
           "width": 1.524
         },
-        "silk_line_width": 0.15,
+        "silk_line_width": 0.12,
         "silk_text_italic": false,
-        "silk_text_size_h": 1.0,
-        "silk_text_size_v": 1.0,
+        "silk_text_size_h": 0.7999999999999999,
+        "silk_text_size_v": 0.7999999999999999,
         "silk_text_thickness": 0.15,
-        "silk_text_upright": false,
+        "silk_text_upright": true,
         "zones": {
           "45_degree_only": false,
           "min_clearance": 0.508
@@ -54,6 +54,11 @@
           "gap": 0.0,
           "via_gap": 0.0,
           "width": 0.0
+        },
+        {
+          "gap": 0.2032,
+          "via_gap": 0.15,
+          "width": 0.127
         }
       ],
       "drc_exclusions": [],
@@ -114,9 +119,9 @@
         "allow_blind_buried_vias": false,
         "allow_microvias": false,
         "max_error": 0.005,
-        "min_clearance": 0.19999999999999998,
+        "min_clearance": 0.0,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.0,
+        "min_copper_edge_clearance": 0.024999999999999998,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.25,
         "min_microvia_diameter": 0.19999999999999998,
@@ -126,7 +131,7 @@
         "min_text_height": 0.7999999999999999,
         "min_text_thickness": 0.08,
         "min_through_hole_diameter": 0.19999999999999998,
-        "min_track_width": 0.19999999999999998,
+        "min_track_width": 0.127,
         "min_via_annular_width": 0.049999999999999996,
         "min_via_diameter": 0.44999999999999996,
         "solder_mask_clearance": 0.0,
@@ -176,10 +181,15 @@
       ],
       "track_widths": [
         0.0,
+        0.1,
+        0.15,
         0.2,
         0.25,
+        0.3,
+        0.4,
         0.5,
-        1.0
+        0.6,
+        0.8
       ],
       "via_dimensions": [
         {
@@ -192,10 +202,14 @@
         },
         {
           "diameter": 0.65,
+          "drill": 0.3
+        },
+        {
+          "diameter": 0.8,
           "drill": 0.4
         }
       ],
-      "zones_allow_external_fillets": false,
+      "zones_allow_external_fillets": true,
       "zones_use_no_outline": true
     },
     "layer_presets": [],
@@ -421,26 +435,43 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "8052.kicad_pro",
+    "filename": "8052-MCU.kicad_pro",
     "version": 1
   },
   "net_settings": {
     "classes": [
       {
         "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.25,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.2,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "diff_pair_width": 0.15,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.2,
+        "track_width": 0.15,
         "via_diameter": 0.45,
         "via_drill": 0.2,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "GND",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.3,
+        "via_diameter": 0.8,
+        "via_drill": 0.4,
         "wire_width": 6
       }
     ],
@@ -449,7 +480,176 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA banks 34 and 35, DDR3/DDR_CLK_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA banks 34 and 35, DDR3/DDR_CLK_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA banks 34 and 35, DDR3/DDR_LDQS_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA banks 34 and 35, DDR3/DDR_LDQS_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA banks 34 and 35, DDR3/DDR_UDQS_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA banks 34 and 35, DDR3/DDR_UDQS_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/micro, USB, SD/USBH_D_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/micro, USB, SD/USBH_D_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/micro, USB, SD/USB_D_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/micro, USB, SD/USB_D_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/micro, USB, SD/USBH0_D_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/micro, USB, SD/USBH1_D_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA Banks 15 and 16/HDMI_OPT3_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA Banks 15 and 16/HDMI_OPT2_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA Banks 15 and 16/HDMI_OPT2_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA Banks 15 and 16/HDMI_OPT3_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA Banks 15 and 16/HDMI_OPT1_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA Banks 15 and 16/HDMI_OPT1_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA Banks 15 and 16/HDMI_OPT0_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/FPGA Banks 15 and 16/HDMI_OPT0_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/micro, USB, SD/USBD_D_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/micro, USB, SD/USBD_D_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D1_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D1_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/CLK_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/CLK_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D0_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D0_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D2_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D2_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D0_AC_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D0_AC_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D1_AC_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D1_AC_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D2_AC_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/D2_AC_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/CLK_AC_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/CLK_AC_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/MGTREFCLK_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/MGTREFCLK_P"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/REFCLK_N"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/HDMI & GTP/REFCLK_P"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {

@@ -1,6 +1,6 @@
 {
   "board": {
-    "active_layer": 0,
+    "active_layer": 2,
     "active_layer_preset": "",
     "auto_track_width": true,
     "hidden_netclasses": [],
@@ -64,11 +64,11 @@
       35,
       36
     ],
-    "visible_layers": "ffcfffd_fffffff9",
+    "visible_layers": "ffcfffd_fffffffd",
     "zone_display_mode": 0
   },
   "meta": {
-    "filename": "8052.kicad_prl",
+    "filename": "8052-MCU.kicad_prl",
     "version": 3
   },
   "project": {
